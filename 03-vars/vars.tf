@@ -19,3 +19,45 @@ output "sample1" {
 output "sample-ext" {
   value = "value of sample - ${var.sample}"
 }
+
+# plain
+variable "course" {
+  default = "DevOps Training"
+}
+
+# list
+variable "courses" {
+  default = [
+  "DevOps",
+  "AWS",
+  "python"
+  ]
+}
+
+# map
+variable "course_details" {
+  default = {
+    Devops = {
+      name     = "DevOps"
+      timing   = "10am"
+      duration = "90"
+    }
+    aws = {
+      name = "aws"
+      timing = "11am"
+      duration = "30"
+    }
+  }
+}
+
+output "course" {
+  value = var.course
+}
+
+output "courses" {
+  value = var.courses
+}
+
+output "course_details" {
+  value = var.course_details
+}
