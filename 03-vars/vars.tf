@@ -37,13 +37,13 @@ variable "courses" {
 # map
 variable "course_details" {
   default = {
-    Devops = {
+    DevOps = {
       name     = "DevOps"
       timing   = "10am"
       duration = "90"
     }
     aws = {
-      name = "aws"
+      name = "AWS"
       timing = "11am"
       duration = "30"
     }
@@ -59,5 +59,5 @@ output "courses" {
 }
 
 output "course_details" {
-  value = var.course_details[DevOps]
+  value = var.course_details["DevOps"]
 }
