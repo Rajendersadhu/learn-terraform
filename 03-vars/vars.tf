@@ -55,9 +55,9 @@ output "course" {
 }
 
 output "courses" {
-  value = var.courses[2]
+  value = var.courses[3]
 }
 
 output "course_details" {
-  value = var.course_details["DevOps"]
+  value = var.course_details["AWS"]
 }
